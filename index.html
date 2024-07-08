@@ -1,0 +1,603 @@
+<script src="https://kit.fontawesome.com/cd9d6500a7.js" crossorigin="anonymous"></script>
+
+
+
+<body>
+  <!-- logo for b chats -->
+  <img src="https://i.imgur.com/ESKLuHf.png" id="logo"></img>
+  <!-- Sidebar including pfp and logout -->
+<div class="sidebar">
+  <div class="iconHolder">
+    <div class="sideHolder" id="homes"></div>
+  <i class="fa-solid fa-house"></i>
+  </div>
+  <div class="iconHolder" id="chatBut">
+    <div class="sideHolder" id="chats"></div>
+  <i class="fa-solid fa-message"></i>
+  </div>
+  <div class="iconHolder">
+    <div class="sideHolder" id="settings"></div>
+  <i class="fa-solid fa-gear"></i>
+  </div>
+</div>
+  <!-- pfp below area with logout -->
+  <div class="pfp">
+    <!-- pfp -->
+    <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/VInfinite017/phpo1DxRH.jpeg" alt="Example PFP" id="pfpImage"></img>
+  <h1> Shyun </h1>
+  <!-- log out -->
+  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+  </div>
+
+
+<!-- Chatsearch side div -->
+<div class="chat-search">
+  <div class="chat-top-bar">
+      <h1> Chats </h1>
+      <div class="chatInputTop">
+        <input placeholder="Search for your friends"></input>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+<!-- people placeholders -->
+  <div class="personChat">
+    
+    <img src="https://s3-alpha.figma.com/hub/file/2944732189/b47472b8-4e17-477e-a0a8-d5fcbed6a374-cover.png"></img>
+  <div class="columnizer">
+  <h1> Sharun J </h1>
+    <h3> Just a guy dying </h3>
+    <p> Hey Shyun! You there? </p>
+  </div>
+  <span> 15/06/24 </span>
+  <div class="lineCircle"></div>
+</div>
+<div class="personChat">
+    
+    <img src="https://s3-alpha.figma.com/hub/file/2944732189/b47472b8-4e17-477e-a0a8-d5fcbed6a374-cover.png"></img>
+  <div class="columnizer">
+  <h1> Sharun J </h1>
+    <h3> Just a guy dying </h3>
+    <p> Hey Shyun! You there? </p>
+  </div>
+  <span> 15/06/24 </span>
+  <div class="lineCircle" style="background-color: red"></div>
+</div>
+<div class="personChat">
+    
+    <img src="https://s3-alpha.figma.com/hub/file/2944732189/b47472b8-4e17-477e-a0a8-d5fcbed6a374-cover.png"></img>
+  <div class="columnizer">
+  <h1> Sharun J </h1>
+    <h3> Just a guy dying </h3>
+    <p> Hey Shyun! You there? </p>
+  </div>
+  <span> 15/06/24 </span>
+  <div class="lineCircle" style="display: none"></div>
+</div>
+<div class="personChat">
+    
+    <img src="https://s3-alpha.figma.com/hub/file/2944732189/b47472b8-4e17-477e-a0a8-d5fcbed6a374-cover.png"></img>
+  <div class="columnizer">
+  <h1> Sharun J </h1>
+    <h3> Just a guy dying </h3>
+    <p> Hey Shyun! You there? </p>
+  </div>
+  <span> 15/06/24 </span>
+  <div class="lineCircle"></div>
+</div>
+<div class="personChat">
+    
+    <img src="https://s3-alpha.figma.com/hub/file/2944732189/b47472b8-4e17-477e-a0a8-d5fcbed6a374-cover.png"></img>
+  <div class="columnizer">
+  <h1> Sharun J </h1>
+    <h3> Just a guy dying </h3>
+    <p> Hey Shyun! You there? </p>
+  </div>
+  <span> 15/06/24 </span>
+  <div class="lineCircle"></div>
+</div>
+</div>
+
+
+<div class="chatArea">
+  <div class="top-area-name"></div>
+  <div class="chatInputCont">
+    <i class="fa-solid fa-paperclip" id="add"></i>
+    <input  id="chatInput" class="chat-input" type="text" placeholder="Type a message"></input>
+  <i class="fa-solid fa-circle-arrow-right" onclick="clickity()"></i>
+  </div>
+<div class="scroll-bg">
+  <div class="scroll-div">
+    <div class="scroll-object">
+<sand id="chatContainer">
+<div class="chatboxUser">
+  <sect>
+  <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/VInfinite017/phpo1DxRH.jpeg"id="userPFP"></img>
+  <h1 id="userName"> Shyun </h1>
+  </sect>
+  <span id="userTime"> 16/06/24 at 19:29 
+  </span>
+  <p id="userText"> Test </p>
+</div>
+</sand>
+  </div>
+</div>
+</div>
+<div class="bottomPlace"></div>
+</div>
+</body>
+<style>
+  * {
+  margin: 0;
+}
+body {
+  background: #282A37;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.sidebar {
+  background: transparent;
+  max-width: 135px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar i {
+  scale: 2;
+  margin: 15px;
+}
+
+.iconHolder {
+  position: relative;
+  width: 100%;
+  min-width: 120px;
+  max-width: 135px;
+  background: rgba(170,129,227,0.75);
+  margin-top: 10px;
+  padding: 15px;
+  color: #cacccf;
+  border-radius: 0px 10px 10px 0px;
+  transition: all 0.05s ease-in-out;
+}
+
+.iconHolder:hover {
+  color: #dfe0e2;
+  background: rgba(170,129,227,1);
+  border-radius: 0px 15px 15px 0px;
+}
+
+.sideHolder {
+  height: 100%;
+  width: 10px;
+  position: absolute;
+  background: #eee5f9;
+  margin: -5px;
+  margin-top: -15px;
+  left: 0;
+  opacity: 0.25;
+}
+
+.pfp {
+  position: absolute;
+  z-index: 2;
+  padding: 10px;
+  bottom: -5px;
+  left: 0;
+  background: rgba(171,152,204,0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: white;
+  width: 145px;
+  border-radius: 0px 15px 0px 0px;
+  transition: all 0.05s ease-in-out;
+}
+
+.pfp:hover {
+  background: rgba(196,182,219,0.75);
+  bottom: 0;
+}
+
+.pfp i {
+  scale: 1.5;
+  margin-bottom: 10px;
+  transition: all 0.05s ease;
+}
+
+.pfp i:hover {
+  scale: 1.69;
+}
+
+.pfp h1 {
+  font-size: 15px;
+  margin-top: -15px;
+  margin-bottom: -7.5px;
+  font-family: "Helvetica", cursive;
+}
+
+#pfpImage {
+  border-radius: 50%;
+  border: 3px dashed #722FCA;
+  width: 65px;
+}
+
+
+
+
+
+.chat-search {
+  height: 100%;
+  width: 300px;
+  background: transparent;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.personChat {
+  background: #3E404D;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+  font-family: "Helvetica", cursive;
+  position: relative;
+}
+
+.personChat:hover {
+  
+}
+
+h1, h3, p {
+  margin-left: 20px;
+  margin-top: 0px;
+  font-family: "Helvetica", cursive;
+}
+
+
+h3 {
+  font-size: 10px;
+  color: white;
+  opacity: 0.5;
+}
+
+.personChat p {
+  font-size: 15px;
+  margin-top: 10px;
+  color: white;
+  opacity: 0.75;
+}
+
+.personChat span{
+  color: white;
+  opacity: 0.75;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  margin: 15px;
+  font-size: 10px;
+}
+
+.personChat img {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50%;
+}
+
+.lineCircle {
+  background: #66B953; 
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top:0;
+  margin: 5px;
+}
+
+.chat-top-bar {
+  width: 300px;
+  color: white !important;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  background: transparent;
+}
+
+.chat-top-bar h1, input {
+  margin: 15px;
+}
+
+.chat-top-bar h1 {
+  margin-left: 0px;
+}
+
+.chat-top-bar input {
+  width: 135px;
+  height: 20px;
+  margin-left: 25px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.chatInputTop {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+    cursor: pointer;
+}
+
+#logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 7.5px;
+}
+
+.chatArea {
+  flex-grow: 1;
+  height: calc(100% - 50px);
+  width: calc(100% - 210px);
+  padding: 5px;
+  background: #3e404d;
+  margin: 25px;
+  margin-bottom: 55px !important;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  justify-content: flex-end;
+}
+
+.top-area-name {
+  height: 150px;
+  z-index: 999999;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  background: linear-gradient(to bottom, #282a37 50%, transparent);
+  margin-top: -5px;
+  position: absolute;
+  top: 0;
+}
+
+.chatInputCont {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+ width: 70%;
+  padding: 5px;
+  background: #646670;
+  border-radius: 17.5px 14.5px 17.5px 14.5px;
+  display: flex;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+  margin: 15px;
+}
+
+.chatInputCont i {
+  color: white;
+  flex: 1;
+  margin-left: 17.5px;
+  margin-right: 17.5px;
+}
+
+.chatInputCont input {
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.bottomPlace {
+  height: 100px !important;
+  background: transparent;
+  width: calc(100% + 9px);
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.chatboxUser {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #646670;
+  border-radius: 25px 25px 0.5px 25px;
+  color: white;
+  font-family: "Helvetica", cursive;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+}
+.chatboxUser h1 {
+  textalign: left;
+  font-size: 25px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: -5px;
+  font-weight: bold;
+}
+
+.chatboxUser span {
+  margin-left: 43px;
+  margin-top: -7.5px;
+  font-size: 9px;
+  color: white;
+  opacity: 0.65;
+  font-weight: 300;
+}
+
+.chatboxUser p {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+.chatboxUser img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+sect {
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+}
+
+sand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  justify-content: flex-end;
+  margin-right: 25px;
+  overflowY: scroll;
+}
+
+#chatContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-height: calc(100% - 50px); 
+  width: 100%;
+  overflowY: scroll;
+}
+
+.scroll-bg {
+    background: transparent;
+    width: 650px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-div {
+    width: 666px;
+    background: transparent;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.scroll-object {
+}
+
+</style>
+<Script>
+// Existing script to toggle chat display
+document.getElementById('chatBut').addEventListener('click', function() {
+    var chat = document.querySelector('.chat-search');
+    var icon = document.querySelector('#chatBut');
+    var side = document.querySelector('#chats');
+
+    if (chat.style.display === "none") {
+        chat.style.display = "block";
+        side.style.opacity = "0.25";
+        icon.style.color = "#cacccf";
+        icon.style.background = "rgba(170,129,277,0.75)";
+        icon.style.borderRadius = "0px 10px 10px 0px";
+    } else {
+        chat.style.display = "none";
+        side.style.opacity = "1";
+        icon.style.color = "#dfe0e2";
+        icon.style.background = "rgba(170,129,277,1)";
+        icon.style.borderRadius = "0px 15px 15px 0px";
+    }
+});
+
+// Function to create a new chatboxUser element
+function createChatboxUser(text) {
+  var chat = document.querySelector('.chat-search');
+    const chatContainer = document.getElementById('chatContainer');
+    const scrollDiv = document.querySelector('.scroll-div');
+  
+ // if (chat.style.display === "none") {
+
+    const chatboxUser = document.createElement('div');
+    chatboxUser.classList.add('chatboxUser');
+
+    const sect = document.createElement('sect');
+
+    const userPFP = document.createElement('img');
+    userPFP.src = "https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/VInfinite017/phpo1DxRH.jpeg";
+    userPFP.id = "userPFP";
+
+    const userName = document.createElement('h1');
+    userName.id = "userName";
+    userName.innerText = "Shyun";
+
+    const userTime = document.createElement('span');
+    userTime.id = "userTime";
+    const currentTime = new Date().toLocaleString();
+    userTime.innerText = currentTime;
+
+    const userText = document.createElement('p');
+    userText.id = "userText";
+    userText.innerHTML = text.replace(/(.{43})/g, '$1<br>');
+
+    sect.appendChild(userPFP);
+    sect.appendChild(userName);
+    chatboxUser.appendChild(sect);
+    chatboxUser.appendChild(userTime);
+    chatboxUser.appendChild(userText);
+
+    chatContainer.appendChild(chatboxUser);
+    chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom
+
+    // Scroll the scroll-div to the bottom
+    scrollDiv.scrollTop = scrollDiv.scrollHeight;
+   // } else {
+     // alert("Please Close Side Friend Search bar. Then type your message Again. Since this is BETA!, there might me more broken bugs like this. Please email to ssnighdhasiraz22@sirhenryfloyd.co.uk if you see any obvious ones. Provide your name and a screenshot.")
+  //  }
+}
+
+// Event listener to handle Enter key press
+document.addEventListener('DOMContentLoaded', function() {
+    const inputElement = document.querySelector('.chat-input');
+    const scrollDiv = document.querySelector('.scroll-div');
+
+    inputElement.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission if inside a form
+            let text = inputElement.value;
+            inputElement.value = ''; // Clear the input field
+            createChatboxUser(text);
+        }
+    });
+});
+
+  alert('This is only a UI aspect of the website. The real Website will have serious new modifications.");
+</Script>
